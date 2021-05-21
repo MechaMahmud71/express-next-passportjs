@@ -5,9 +5,9 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 exports.facebook=(passport)=>{
   passport.use(new FacebookStrategy({
-    // 
-    clientID:837969263422062,
-    clientSecret:"7dca618e4df0ece27b02cc09820ec200",
+     
+    clientID:process.env.FACEBOOK_CLIENT_ID,
+    clientSecret:process.env.FACEBOOK_CLIENT_ID,
     callbackURL: "http://localhost:5000/auth/facebook/callback",
     profileFields   : ['id','displayName','name','gender','picture.type(large)','email']
   },
@@ -20,9 +20,9 @@ exports.facebook=(passport)=>{
 
 exports.google=(passport)=>{
   passport.use(new GoogleStrategy({
-    // 529801177291-s8egua48q5uuor9l92o0h4gesbp416du.apps.googleusercontent.com
-    clientID: "529801177291-s8egua48q5uuor9l92o0h4gesbp416du.apps.googleusercontent.com",
-    clientSecret:"A5gXO6ubjW-zdzVwhoneuvm-",
+    
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret:process.env.GOOGLE_CLIENT_SECRET,
     callbackURL: "http://localhost:5000/auth/google/callback",
     profileFields   : ['id','displayName','name','gender','picture.type(large)','email']
   },
