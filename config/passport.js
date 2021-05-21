@@ -6,8 +6,8 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 exports.facebook=(passport)=>{
   passport.use(new FacebookStrategy({
      
-    clientID:process.env.FACEBOOK_CLIENT_ID,
-    clientSecret:process.env.FACEBOOK_CLIENT_ID,
+    clientID:837969263422062,
+    clientSecret:process.env.FACEBOOK_CLIENT_SECRET,
     callbackURL: "http://localhost:5000/auth/facebook/callback",
     profileFields   : ['id','displayName','name','gender','picture.type(large)','email']
   },
