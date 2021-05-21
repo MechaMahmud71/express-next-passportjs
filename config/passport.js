@@ -27,7 +27,7 @@ exports.google=(passport)=>{
     profileFields   : ['id','displayName','name','gender','picture.type(large)','email']
   },
   function(accessToken, refreshToken, profile, done) {
-    console.log(profile)
+    
     done(null,profile)
   }
   ));
