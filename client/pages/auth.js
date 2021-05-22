@@ -13,6 +13,7 @@ const Auth=()=> {
     <title>Auth</title>
     </Head>
      <div className={styles.container}>
+      
       <a href={FACEBOOK_URL} className={styles.facebook_button}>
         <i className="fab fa-facebook-f" id="facebook-icon"></i>
         <span className={styles.span}>Login with Facebook</span>

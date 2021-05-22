@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Auth.module.css'
 
 
 
@@ -9,8 +9,11 @@ export default function Home({posts}) {
   
   return (
     <>
-      <div>hi from index page</div>
-      <p></p>
+      <div className={styles.container}>
+        
+        <a href="http://localhost:3000/auth" className={styles.auth_page_link}>Auth Page</a>
+      </div>
+      
     </>
   )
 }

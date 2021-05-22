@@ -1,18 +1,23 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+
+import styles from '../styles/Auth.module.css'
 
 
 import axios from "axios";
 
 
 
-export default function Profile({posts}) {
-  // const postDOM=posts.map((el,index)=><div className={styles.test} key={index}>{el.title}</div>)
-  console.log(posts)
+export default function Profile({success}) {
+  
   return (
     <>
-      <div>You are logged in</div>
-      <p></p>
+      
+      <title>Profile</title>
+      
+      <div className={styles.container}>
+        <h1 className={styles.greetings}>Congrats!!</h1>
+        <p className={styles.loggedin}>You are logged in</p>
+        <p className={styles.success}>{success}</p>
+      </div>
     </>
   )
 }
@@ -20,11 +25,11 @@ export default function Profile({posts}) {
 export const getStaticProps=async()=>{
   const {data:{message}}= await axios.get(`http://localhost:5000/profile`);
 
-  console.log(message)
-  
   return{
     props:{
-      posts:message
+      success:message
     }
   }
 }
+
+  

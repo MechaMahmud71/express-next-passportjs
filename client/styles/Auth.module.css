@@ -69,3 +69,16 @@
 .google_btn:active {
   background: #1669F2;
 }
+
+.auth_page_link{
+  margin-top: 20px;
+  padding: 20px 60px;
+  background: skyblue;
+  color: black;
+  border-radius: 3px;
+}
+
+.auth_page_link:hover{
+  background-color: blue;
+}
+
